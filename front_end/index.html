@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/appointment.css">
+    <!-- flatpickr CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
+    <title>Schedule Me </title>
+</head>
+
+<body>
+    <!--======= Header =======-->
+    <header class="header">
+        <div class="container">
+           <h1>Appointments</h1> 
+           <div class="menu-toggle">
+           </div>
+        </div>
+     </header>
+
+    <!--======= Current Day  =======-->
+    <div>
+        <h3 class="date-title"> </h3>
+    </div>
+
+    <!--======= New Appointment Form =======-->
+    <div class = container >
+        <form class = "appointment_form">
+            <div class="appointment">
+                <label> Appointment Name:</label> <br>
+                    <input type="text" id="appointment_name_form" placeholder="Appointment"><br>
+                    <label> Date:</label><br>
+                    <input type="text" id="basicDate" placeholder="Please select Date" data-input> </label><br>
+                <label> Start Time:</label><br>
+                    <input type="text" id="startPicker" placeholder="Please select Start Time"><br>
+                    <label> End Time:</label><br>
+                    <input type="text" id="endPicker" placeholder="Please select End Time"><br>
+            
+                <button class="input-button" title="clear" data-clear>Clear</button> <br>
+            
+                <input type = 'submit' class="add_appointment_button" value ="Add Appointment">
+                  <!-- <span class="add-appointment-button__title">Add Appointment</span>  -->
+       </form>
+    </div>
+    <!--======= Upcoming Events =======-->
+
+    <section class="upcoming-events">
+        <div class="container">
+           <h3> Upcoming Appointments</h3>
+           <div class = "appointments_container">
+               <ul class = "appointment_list">  </ul>
+           </div>
+        </div>
+    </section>
+
+     <!-- scripts  -->
+  <script src="src/components/appointments.js"></script>
+  <script src="src/components/appointment.js"></script>
+  <script src="src/components/app.js"></script>
+  <script src= "src/services/appointmentsAdapter.js"></script>
+  <script src ="src/index.js"></script>
+  <script src="src/components/dateAndTime.js"></script>
+
+
+</body>
+
+
+</html>
